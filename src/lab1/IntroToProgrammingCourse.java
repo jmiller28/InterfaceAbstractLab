@@ -9,16 +9,17 @@ import javax.swing.JOptionPane;
  * @author      your name goes here
  * @version     1.00
  */
-public class IntroToProgrammingCourse {
+public class IntroToProgrammingCourse extends ProgrammingCourse {
     private String courseName;
     private String courseNumber;
     private double credits;
-
+        private String prerequisites;
+/*
     public IntroToProgrammingCourse(String courseName, String courseNumber) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
     }
-
+*/
     public String getCourseNumber() {
         return courseNumber;
     }
@@ -56,6 +57,16 @@ public class IntroToProgrammingCourse {
             System.exit(0);
         }
         this.courseName = courseName;
+    }
+
+    @Override
+     public void setPrerequisites(String prerequisites) {
+        if (prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null or empty string");
+            System.exit(0);
+        }
+        this.prerequisites = prerequisites;
     }
 
     
