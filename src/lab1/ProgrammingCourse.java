@@ -1,5 +1,7 @@
 package lab1;
 
+import javax.swing.JOptionPane;
+
 public abstract class ProgrammingCourse {
 
     private String courseName;
@@ -11,13 +13,27 @@ public abstract class ProgrammingCourse {
         return courseName;
     }
 
-    public abstract void setCourseName(String courseName);
+    public void setCourseName(String courseName) {
+        if (courseName == null || courseName.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseName cannot be null of empty string");
+            System.exit(0);
+        }
+        this.courseName = courseName;
+    }
 
     public String getCourseNumber() {
         return courseNumber;
     }
 
-    public abstract void setCourseNumber(String courseNumber);
+     public void setCourseNumber(String courseNumber) {
+        if (courseNumber == null || courseNumber.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseNumber cannot be null of empty string");
+            System.exit(0);
+        }
+        this.courseNumber = courseNumber;
+    }
 
     public double getCredits() {
         return credits;

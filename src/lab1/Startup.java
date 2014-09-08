@@ -1,5 +1,15 @@
 package lab1;
 
+/**
+ * Liskov Substitution principle can be used when the base class methods are the
+ * only methods used. If the child class has methods not in the base class, an
+ * object declared from the base class will not have access to the child class
+ * methods.
+ *
+ * Abstraction is good from the standpoint sharing code between classes without
+ * having to duplicate a lot of it. One the downside, we can only extend one
+ * abstract class.
+ */
 public class Startup {
 
     public static void main(String[] args) {
