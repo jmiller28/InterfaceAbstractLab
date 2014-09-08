@@ -6,15 +6,7 @@ public abstract class ProgrammingCourse {
     private String courseNumber;
     private double credits;
     private String prerequisites;
-/*
-    public ProgrammingCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
-    }
- */
-    public String getCapitalizedCourseName() {
-        return getCourseName().toUpperCase();
-    }
+
     public String getCourseName() {
         return courseName;
     }
