@@ -2,12 +2,13 @@ package lab2;
 
 /**
  *
- * @author JMILLER
+ * Liskov Substitution principle can be used when the base class methods are the only methods used.
+ * If the child class has methods not in the base class, an object declared from the base class will not have access to the child class methods
  */
 public class Startup {
     public static void main(String[] args) {
 
-        IntroToProgrammingCourse course1 = new IntroToProgrammingCourse();
+        ProgrammingCourse course1 = new IntroToProgrammingCourse();
         course1.setCourseName("Intro To Programming");
         course1.setCourseNumber("152-135");
         course1.setCredits(2.0);

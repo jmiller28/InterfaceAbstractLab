@@ -14,7 +14,6 @@ public class IntroToProgrammingCourse extends ProgrammingCourse {
     private String courseName;
     private String courseNumber;
     private double credits;
-    private String prerequisites;
 
     @Override
     public String getCourseName() {
@@ -22,13 +21,33 @@ public class IntroToProgrammingCourse extends ProgrammingCourse {
     }
 
     @Override
-    public final void setCourseName(String courseName) {
+    public void setCourseName(String courseName) {
         if (courseName == null || courseName.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseName cannot be null of empty string");
             System.exit(0);
         }
         this.courseName = courseName;
+    }
+
+    @Override
+    public String getCourseNumber() {
+        return courseNumber;
+    }
+
+    @Override
+    public void setCourseNumber(String courseNumber) {
+        if (courseNumber == null || courseNumber.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseNumber cannot be null of empty string");
+            System.exit(0);
+        }
+        this.courseNumber = courseNumber;
+    }
+
+    @Override
+    public double getCredits() {
+        return credits;
     }
 
     public void setCredits(double credits) {
@@ -39,29 +58,4 @@ public class IntroToProgrammingCourse extends ProgrammingCourse {
         }
         this.credits = credits;
     }
-
-    public String getPrerequisites() {
-        return prerequisites;
-    }
-
-    @Override
-    public void setPrerequisites(String prerequisites) {
-        if (prerequisites == null || prerequisites.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: prerequisites cannot be null or empty string");
-            System.exit(0);
-        }
-        this.prerequisites = prerequisites;
-    }
-
-    @Override
-    public final void setCourseNumber(String courseNumber) {
-        if (courseNumber == null || courseNumber.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseNumber cannot be null of empty string");
-            System.exit(0);
-        }
-        this.courseNumber = courseNumber;
-    }
-
 }

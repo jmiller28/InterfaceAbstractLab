@@ -16,22 +16,37 @@ public class IntroJavaCourse extends ProgrammingCourse {
     private String prerequisites;
 
     @Override
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        if (courseName == null || courseName.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseName cannot be null of empty string");
+            System.exit(0);
+        }
+        this.courseName = courseName;
+    }
+
+    @Override
     public String getCourseNumber() {
         return courseNumber;
     }
 
     @Override
-    public double getCredits() {
-        return credits;
+    public void setCourseNumber(String courseNumber) {
+        if (courseNumber == null || courseNumber.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseNumber cannot be null of empty string");
+            System.exit(0);
+        }
+        this.courseNumber = courseNumber;
     }
 
     @Override
-    public String getPrerequisites() {
-        return prerequisites;
-    }
-
-    public void setPrerequisites(String prerequisites) {
-        this.prerequisites = prerequisites;
+    public double getCredits() {
+        return credits;
     }
 
     public void setCredits(double credits) {
@@ -42,28 +57,18 @@ public class IntroJavaCourse extends ProgrammingCourse {
         }
         this.credits = credits;
     }
-/*
-    public final void setCourseName(String courseName) {
-        if (courseName == null || courseName.length() == 0) {
+
+    public String getPrerequisites() {
+        return prerequisites;
+    }
+
+    public void setPrerequisites(String prerequisites) {
+        if (prerequisites == null || prerequisites.length() == 0) {
             JOptionPane.showMessageDialog(null,
-                    "Error: courseName cannot be null of empty string");
+                    "Error: prerequisites cannot be null of empty string");
             System.exit(0);
         }
-        this.courseName = courseName;
-    }
-*/
-    @Override
-    public String getCourseName() {
-        return courseName;
+        this.prerequisites = prerequisites;
     }
 
-    @Override
-    public void setCourseName(String courseName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void setCourseNumber(String courseNumber) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

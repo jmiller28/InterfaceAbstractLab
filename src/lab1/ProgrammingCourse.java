@@ -5,7 +5,7 @@ public abstract class ProgrammingCourse {
     private String courseName;
     private String courseNumber;
     private double credits;
-    private String prerequisites;
+
 
     public String getCourseName() {
         return courseName;
@@ -24,11 +24,5 @@ public abstract class ProgrammingCourse {
     }
 
     public abstract void setCredits(double credits);
-
-    public String getPrerequisites() {
-        return prerequisites;
-    }
-
-    public abstract void setPrerequisites(String prerequisites);
 
 }
